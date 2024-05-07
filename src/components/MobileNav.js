@@ -39,13 +39,7 @@ const MobileNav = () => {
           >
             About Us
           </Link>
-          <Link
-            onClick={() => setOpenMenu(false)}
-            to={"/ar"}
-            className="mx-[24px] text-[16px] font-[300] hover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms]"
-          >
-            Ar
-          </Link>
+
           <Link
             onClick={() => setOpenMenu(false)}
             to={"/contact"}

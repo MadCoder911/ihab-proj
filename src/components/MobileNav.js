@@ -26,30 +26,35 @@ const MobileNav = () => {
             </button>
           </div>
           <Link
+            onClick={() => setOpenMenu(false)}
             to={"/"}
             className="mx-[24px] text-[16px] font-[300] hover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms]"
           >
             Home
           </Link>
           <Link
+            onClick={() => setOpenMenu(false)}
             to={"/about"}
             className="mx-[24px] text-[16px] font-[300] hover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms]"
           >
             About Us
           </Link>
           <Link
+            onClick={() => setOpenMenu(false)}
             to={"/ar"}
             className="mx-[24px] text-[16px] font-[300] hover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms]"
           >
             Ar
           </Link>
           <Link
+            onClick={() => setOpenMenu(false)}
             to={"/contact"}
             className="mx-[24px] text-[16px] font-[300] hover:translate-x-[-5px] transition-all ease-in-out duration-[400ms]"
           >
             Contact Us
           </Link>
           <Link
+            onClick={() => setOpenMenu(false)}
             to={"/login"}
             className="font-[300] text-[16px] hhover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms] cursor-pointer"
           >

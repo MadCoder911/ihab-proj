@@ -14,15 +14,17 @@ const Home = () => {
   return (
     <div className="homeBg">
       {/* Hero Section */}
-      <div className="h-[66.8vh] w-[100vw] md:ml-[100px] ml-[40px] container flex items-start flex-col mt-[250px] text-white">
-        <h1 className="text-[50px] font-bold leading-none mb-[20px]">
-          Welcome to RCM <br></br>HealthCare
-        </h1>
-        <p className="text-[25px] leading-tight ">
-          Your trusted partner in optimizing your practice's medical billing and{" "}
-          <br />
-          streamlining your day-to-day operations.
-        </p>
+      <div className="h-[66.8vh] w-[100vw] md:ml-[100px] text-center container flex md:items-start items-center flex-col mt-[250px] text-white">
+        <div className="pl-[30px]">
+          <h1 className="text-[50px] font-bold leading-none mb-[20px]">
+            Welcome to RCM <br></br>HealthCare
+          </h1>
+          <p className="text-[25px] text-center leading-tight ">
+            Your trusted partner in optimizing your practice's medical billing
+            and <br />
+            streamlining your day-to-day operations.
+          </p>
+        </div>
         <button className="text-white absolute bottom-0 left-[50%] translate-x-[-50%] text-[35px] bouncing mb-[70px] md:mb-[20px]">
           <MdKeyboardDoubleArrowDown />
         </button>

@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SlMenu } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [loginStatus, setLoginStatus] = useState(false);
+  useEffect(() => {
+    const userInfo = JSON.parse(localStorage.getItem("userData"));
+    if (!userInfo) {
+      setLoginStatus(false);
+    } else {
+      setLoginStatus(true);
+    }
+  });
   return (
     <div className="absolute text-white md:hidden flex items-center justify-between h-[80px] w-[100%] ">
       <h1 className="px-[20px] font-bold">RCM Health</h1>
@@ -47,13 +56,24 @@ const MobileNav = () => {
           >
             Contact Us
           </Link>
-          <Link
-            onClick={() => setOpenMenu(false)}
-            to={"/login"}
-            className="font-[300] text-[16px] hhover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms] cursor-pointer"
-          >
-            Login
-          </Link>
+          {!loginStatus && (
+            <Link
+              onClick={() => setOpenMenu(false)}
+              to={"/login"}
+              className="font-[300] text-[16px] hhover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms] cursor-pointer"
+            >
+              Login
+            </Link>
+          )}
+          {loginStatus && (
+            <Link
+              onClick={() => setOpenMenu(false)}
+              to={"/profile"}
+              className="font-[300] text-[16px] hhover:translate-x-[-5px] transition-all ease-in-out  duration-[400ms] cursor-pointer"
+            >
+              Login
+            </Link>
+          )}
         </ul>
       </div>
     </div>

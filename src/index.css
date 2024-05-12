@@ -56,6 +56,19 @@ code {
   min-height: 100vh;
   min-width: 100vw;
 }
+.profilebg {
+  background-image: linear-gradient(
+      0deg,
+      rgba(2, 133, 118, 0.779),
+      rgba(0, 112, 71, 0.879)
+    ),
+    url("./images/meeting.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
 .loginbg {
   background-image: linear-gradient(
       0deg,

@@ -124,9 +124,12 @@ const Home = () => {
               </p>
               <ul className="text-black list-disc marker:text-[#21c78f] ">
                 {active === 1 &&
-                  section3data.section1.map((item) => {
+                  section3data.section1.map((item, i) => {
                     return (
-                      <li className="my-[10px] text-[15px] md:text-[18px]">
+                      <li
+                        key={i}
+                        className="my-[10px] text-[15px] md:text-[18px]"
+                      >
                         {item}
                       </li>
                     );

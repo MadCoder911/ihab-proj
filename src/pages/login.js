@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+
 import { toast } from "react-toastify";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [registered, setRegistered] = useState(true);
   const [loginInfo, setLoginInfo] = useState({
     name: "",
@@ -36,14 +37,15 @@ const Login = () => {
         password: "",
       });
       setRegistered(true);
-      console.log(document.cookie.username);
+
       return;
     } catch (error) {
-      console.log(error);
       toast.error("Incorrect username or password.");
     }
   };
-  const navigate = useNavigate();
+  //
+  //
+  //
   const login = async () => {
     try {
       const { data } = await axios({
@@ -53,7 +55,7 @@ const Login = () => {
         headers: { "Content-Type": "application/json", credentials: "include" },
         data: JSON.stringify(loginInfo),
       });
-      console.log(data);
+
       localStorage.setItem("userData", JSON.stringify(data));
       toast.success("You Have Been Logged");
       window.location.reload();
@@ -61,12 +63,14 @@ const Login = () => {
 
       return;
     } catch (error) {
-      console.log(error, "error");
       toast.error("Incorrect username or password.");
     }
   };
+  //
+  //
+  //
   return (
-    <section className="flex flex-col">
+    <section className="flex w-[100vw] flex-col">
       <div className="contactbg flex flex-col items-center">
         <div className="absolute top-[50%] left-[50%] lg:w-[30%] w-[80%] translate-x-[-50%] flex flex-col gap-[30px] translate-y-[-50%] p-[50px] rounded-md bg-[#ffffff6c]">
           {!registered && (
@@ -81,10 +85,10 @@ const Login = () => {
             />
           )}
           <input
-            // value={loginInfo.username}
-            // onChange={(e) =>
-            //   setLoginInfo({ ...loginInfo, username: e.target.value })
-            // }
+            value={loginInfo.username}
+            onChange={(e) =>
+              setLoginInfo({ ...loginInfo, username: e.target.value })
+            }
             type="text"
             placeholder="Username"
             className="bg-transparent text-white placeholder:text-[#ffffff] outline-none border-b border-nuetral-40 pb-[7px] w-[100%]"
@@ -121,8 +125,7 @@ const Login = () => {
                 setRegistered(!registered);
               }}
             >
-              New user?{" "}
-              <span className="underline cursor-pointer">Sign Up</span>
+              New user?<span className="underline cursor-pointer">Sign Up</span>
             </p>
           )}
           {!registered && (

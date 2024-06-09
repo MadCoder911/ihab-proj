@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import MobileNav from "./components/MobileNav";
 function App() {
   return (
-    <div className="App relative flex justify-center">
+    <div className="App relative flex justify-center ">
       <Router>
         <Navbrar />
         <MobileNav />

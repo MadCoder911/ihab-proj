@@ -11,8 +11,9 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 const Home = () => {
   const [active, setActive] = useState(1);
+
   return (
-    <div className="homeBg">
+    <div className="homeBg w-[100vw]">
       {/* Hero Section */}
       <div className="h-[66.8vh] w-[100vw] md:ml-[100px] text-center container flex md:items-start items-center flex-col mt-[250px] text-white">
         <div className="pl-[30px]">

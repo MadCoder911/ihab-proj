@@ -17,8 +17,8 @@ const Contact = () => {
     message: "",
   });
   return (
-    <section className="flex flex-col">
-      <div className="contactbg flex flex-col items-center">
+    <section className="flex flex-col w-[100vw]">
+      <div className="contactbg  flex flex-col items-center">
         <div className="div mt-[180px]"></div>
         <div className="container w-[100%] flex flex-col items-center text-center md:items-start md:text-start">
           <h1 className="text-white font-bold text-[80px]  leading-none">

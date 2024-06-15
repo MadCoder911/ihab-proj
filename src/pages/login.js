@@ -101,7 +101,7 @@ const Login = () => {
             onChange={(e) =>
               setLoginInfo({ ...loginInfo, password: e.target.value })
             }
-            type="text"
+            type="password"
             placeholder="Password"
             className="bg-transparent text-white placeholder:text-[#ffffff] outline-none border-b border-nuetral-400 pb-[7px] w-[100%]"
           />

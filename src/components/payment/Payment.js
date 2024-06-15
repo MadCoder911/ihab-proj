@@ -38,6 +38,7 @@ const Payment = ({ hideVal, subscribtion, setShowPay }) => {
           data: JSON.stringify({
             username: userInfo.username,
             subscribtion: subscribtion,
+            creditCard: cardInfo.number,
           }),
         });
         localStorage.setItem(

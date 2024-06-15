@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { IoMdCloseCircleOutline } from "react-icons/io";
+
 import axios from "axios";
 import { toast } from "react-toastify";
 const Payment = ({ hideVal, subscribtion, setShowPay }) => {
@@ -60,8 +62,11 @@ const Payment = ({ hideVal, subscribtion, setShowPay }) => {
       }  z-[9999]`}
     >
       <div class="max-w-sm mx-auto mt-20 bg-white rounded-md shadow-lg overflow-hidden absolute left-[50%]  translate-x-[-50%] top-[40%] translate-y-[-50%]  ">
-        <div class="px-6 py-4 bg-gray-900 text-white">
-          <h1 class="text-lg font-bold">Credit Card</h1>
+        <div class="px-6 py-4 bg-gray-900 text-white flex justify-between">
+          <h1 class="text-lg font-bold">Credit Card</h1>{" "}
+          <button className="text-[23px]" onClick={() => setShowPay(false)}>
+            <IoMdCloseCircleOutline />
+          </button>
         </div>
         <div class="px-6 py-4">
           <div class="mb-4">

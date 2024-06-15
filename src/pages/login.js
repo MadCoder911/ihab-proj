@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-const API_URL = process.env.API_URL;
+
 import { toast } from "react-toastify";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  //test
+  const API_URL = process.env.API_URL;
   const navigate = useNavigate();
   const [registered, setRegistered] = useState(true);
   const [loginInfo, setLoginInfo] = useState({
@@ -21,6 +23,7 @@ const Login = () => {
     }
   }, []);
   const register = async () => {
+    const API_URL = process.env.API_URL;
     try {
       const { data } = await axios({
         method: "post",

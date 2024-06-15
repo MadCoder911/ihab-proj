@@ -27,7 +27,7 @@ const Payment = ({ hideVal, subscribtion, setShowPay }) => {
       try {
         const { data } = await axios({
           method: "put",
-          url: "http://localhost:4000/subscribtion",
+          url: "https://backend-production-1f9e.up.railway.app/subscribtion",
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",

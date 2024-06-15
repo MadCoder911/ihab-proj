@@ -27,8 +27,8 @@ const Profile = () => {
         />
         <div className="profilebg w-[100vw] flex  justify-center">
           <div className="container mt-[120px] rounded-md">
-            <div className=" bg-[#ffffff6c] shadow-xl relative rounded-md p-4 flex mb-[100px]">
-              <div className="border-r-[3px] border-[#ffffff] pr-[50px]">
+            <div className=" bg-[#ffffff6c] shadow-xl relative rounded-md p-4 flex lg:flex-row flex-col items-center lg:items-start mb-[100px]">
+              <div className="lg:border-r-[3px] border-[#ffffff] lg:pr-[50px]">
                 <img
                   src={profile}
                   alt=""
@@ -61,7 +61,7 @@ const Profile = () => {
                   </span>
                 </p>
                 <button
-                  className="bg-[#21c78f] text-white w-[100%] mt-[40px] hover:scale-[101%] transition-all ease-in-out rounded-md p-2"
+                  className="bg-[#21c78f] mb-[50px] text-white w-[100%] mt-[40px] hover:scale-[101%] transition-all ease-in-out rounded-md p-2"
                   onClick={() => {
                     localStorage.removeItem("userData");
                     window.location.reload();
@@ -70,8 +70,8 @@ const Profile = () => {
                   Logout
                 </button>
               </div>
-              <div className="ml-[40px] w-[70%]">
-                <div>
+              <div className="lg:ml-[40px] w-[70%]">
+                <div className="flex flex-col items-center w-[100%] lg:block">
                   <p className="font-bold text-white text-[25px] ">RC Score</p>
                   <p>
                     <span className="font-bold text-white text-[20px]">
@@ -86,7 +86,7 @@ const Profile = () => {
                     <span className="text-white text-[18px]">100%</span>
                   </p>
                 </div>
-                <div className="my-[70px] w-[100%] flex justify-between">
+                <div className="my-[70px] w-[100%] flex  lg:flex-row flex-col gap-[30px] lg:gap-0 justify-between items-center">
                   <div className="box bg-white rounded-md shadow-md p-[30px] hover:scale-[105%] transition-all ease-in-out cursor-pointer">
                     <h1 className="font-bold text-[30px] text-center mb-[30px]">
                       Silver

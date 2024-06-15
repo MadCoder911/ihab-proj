@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+const API_URL = process.env.API_URL;
 import { toast } from "react-toastify";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
@@ -24,7 +24,7 @@ const Login = () => {
     try {
       const { data } = await axios({
         method: "post",
-        url: "http://localhost:4000/register",
+        url: API_URL + "register",
         withCredentials: true,
         headers: { "Content-Type": "application/json", credentials: "include" },
         data: JSON.stringify(loginInfo),
@@ -50,7 +50,7 @@ const Login = () => {
     try {
       const { data } = await axios({
         method: "post",
-        url: "http://localhost:4000/login",
+        url: API_URL + "login",
         withCredentials: true,
         headers: { "Content-Type": "application/json", credentials: "include" },
         data: JSON.stringify(loginInfo),

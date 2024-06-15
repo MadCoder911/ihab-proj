@@ -27,7 +27,7 @@ const Login = () => {
     try {
       const { data } = await axios({
         method: "post",
-        url: "https://grad-project-beryl.vercel.app/register",
+        url: "https://backend-production-1f9e.up.railway.app/register",
         withCredentials: true,
         headers: { "Content-Type": "application/json", credentials: "include" },
         data: JSON.stringify(loginInfo),
@@ -53,7 +53,7 @@ const Login = () => {
     try {
       const { data } = await axios({
         method: "post",
-        url: "https://grad-project-beryl.vercel.app/login",
+        url: "https://backend-production-1f9e.up.railway.app/login",
         withCredentials: true,
         headers: { "Content-Type": "application/json", credentials: "include" },
         data: JSON.stringify(loginInfo),

@@ -23,7 +23,6 @@ const Login = () => {
     }
   }, []);
   const register = async () => {
-    const API_URL = process.env.API_URL;
     try {
       const { data } = await axios({
         method: "post",
@@ -32,7 +31,7 @@ const Login = () => {
         headers: { "Content-Type": "application/json", credentials: "include" },
         data: JSON.stringify(loginInfo),
       });
-
+      console.log(data, "data");
       toast.success("You Have Been Registered");
       setLoginInfo({
         name: "",
@@ -43,7 +42,7 @@ const Login = () => {
 
       return;
     } catch (error) {
-      toast.error("Incorrect username or password.");
+      toast.error(error.response.data.message);
     }
   };
   //

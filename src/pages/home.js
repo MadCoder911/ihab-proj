@@ -252,10 +252,9 @@ const Home = () => {
                 Planning
               </h1>
               <p>
-                We understand that every practice has unique needs and
-                challenges. That’s why we take the time to sit down with you and
-                assess your practice’s current standing in order to develop a
-                customized plan tailored to your needs.
+                Our experienced teams are ready to take the reins and bring your
+                strategy into play. We work with your existing systems to craft
+                solutions and deliver the best results.
               </p>
             </div>
             <div className="bg-[#21c78f] m-3 text-center p-[20px]">
@@ -263,10 +262,9 @@ const Home = () => {
                 Execution
               </h1>
               <p>
-                We understand that every practice has unique needs and
-                challenges. That’s why we take the time to sit down with you and
-                assess your practice’s current standing in order to develop a
-                customized plan tailored to your needs.
+                We help you stay on top of the ever-changing healthcare
+                landscape and ensure your strategies are implemented efficiently
+                to boost your practice’s bottom line.
               </p>
             </div>
             <div className="bg-[#21c78f] m-3 text-center p-[20px]">
@@ -274,10 +272,9 @@ const Home = () => {
                 Support
               </h1>
               <p>
-                We understand that every practice has unique needs and
-                challenges. That’s why we take the time to sit down with you and
-                assess your practice’s current standing in order to develop a
-                customized plan tailored to your needs.
+                We help you stay on top of the ever-changing healthcare
+                landscape and ensure your strategies are implemented efficiently
+                to boost your practice’s bottom line.
               </p>
             </div>
           </div>

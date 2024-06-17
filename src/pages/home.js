@@ -32,7 +32,7 @@ const Home = () => {
       </div>
       {/*End Hero Section */}
       {/* Section 2 */}
-      <section className="md:flex  bg-gray-200  items-center mb-[100px] p-[100px] md:p-0">
+      <section className="xl:flex  bg-gray-200  items-center mb-[100px] p-[100px] md:p-0">
         <img
           src={image1}
           className="max-w-[700px] max-h-[700px] hidden md:block"
@@ -165,12 +165,12 @@ const Home = () => {
       </section>
       {/* Section 4 */}
       <section className="bg-grad flex flex-col items-center py-[100px]">
-        <div className="container items-center flex flex-col md:flex-row w-[100%] justify-between">
+        <div className="container items-center flex flex-col xl:flex-row w-[100%] justify-between">
           <h1 className="text-[35px] text-left font-bold leading-none mb-[20px]  text-white">
             We know what it <br /> takes to boost your <br />
             bottom line, and <br /> we have the <br /> numbers to prove it.
           </h1>
-          <div className="flex flex-wrap md:flex-nowrap md:justify-between  relative w-[60%]">
+          <div className="flex flex-wrap xl:flex-nowrap md:justify-between  relative w-[60%]">
             <span className="relative">
               <img src={hex} className="max-w-[200px]" alt=""></img>
               <p className="absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] font-bold leading-none">
@@ -199,7 +199,7 @@ const Home = () => {
         </div>
       </section>
       {/* Section 5 */}
-      <section className="flex md:flex-row flex-col    items-center mb-[100px]">
+      <section className="flex xl:flex-row flex-col    items-center mb-[100px]">
         <img
           src={image4}
           className="md:max-w-[700px] md:max-h-[700px] max-w-[100%]"
@@ -236,7 +236,7 @@ const Home = () => {
             Discover the possibilities that lie ahead of you
           </h1>
           <div className="flex md:flex-row flex-col justify-between">
-            <div className="bg-[#21c78f] m-3 text-center p-[20px] ">
+            <div className="bg-[#21c78f] w-[100%] xl:w-[25%] m-3 text-center p-[20px] ">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
                 Evaluation
               </h1>
@@ -247,7 +247,7 @@ const Home = () => {
                 customized plan tailored to your needs.
               </p>
             </div>
-            <div className="bg-[#21c78f] m-3 text-center p-[20px]">
+            <div className="bg-[#21c78f] w-[100%] xl:w-[25%] m-3 text-center p-[20px]">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
                 Planning
               </h1>
@@ -257,7 +257,7 @@ const Home = () => {
                 solutions and deliver the best results.
               </p>
             </div>
-            <div className="bg-[#21c78f] m-3 text-center p-[20px]">
+            <div className="bg-[#21c78f] w-[100%] xl:w-[25%] m-3 text-center p-[20px]">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
                 Execution
               </h1>
@@ -267,14 +267,14 @@ const Home = () => {
                 to boost your practice’s bottom line.
               </p>
             </div>
-            <div className="bg-[#21c78f] m-3 text-center p-[20px]">
+            <div className="bg-[#21c78f] w-[100%] xl:w-[25%] m-3 text-center p-[20px]">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
                 Support
               </h1>
               <p>
-                We help you stay on top of the ever-changing healthcare
-                landscape and ensure your strategies are implemented efficiently
-                to boost your practice’s bottom line.
+                We provide the necessary tools and offer ongoing support to
+                ensure everything stays on track. We troubleshoot problems and
+                make adjustments as required to accommodate your changing needs.
               </p>
             </div>
           </div>

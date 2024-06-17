@@ -22,7 +22,7 @@ const MobileNav = () => {
       <div
         className={`shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] absolute transition-all ease-in-out ${
           openMenu ? "translate-y-[65px]" : "translate-y-[-300px]"
-        } w-[100%] bg-[#21c78f]`}
+        } w-[100%] bg-[#21c78f] z-[999]`}
       >
         <ul className="flex flex-col gap-[10px] py-[10px] justify-center  items-center">
           <div className="flex justify-between mt-[35px] items-center w-[100%] ">

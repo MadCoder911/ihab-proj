@@ -133,6 +133,7 @@ const Contact = () => {
               <PiArrowFatLineRightFill className="mr-[10px] text-[25px] text-[#21c78f]" />{" "}
               <span
                 className="font-[900] text-[20px]"
+                //
                 onClick={() => {
                   if (
                     !form.firstName ||
@@ -144,6 +145,8 @@ const Contact = () => {
                     !form.howInfo ||
                     !form.country ||
                     !form.email ||
+                    !form.email.includes("@") ||
+                    !form.email.includes(".com") ||
                     form.phone.length < 11 ||
                     form.message.length < 5
                   ) {

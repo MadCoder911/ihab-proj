@@ -43,10 +43,9 @@ const Home = () => {
             We Are RCM <br></br>Healthcare
           </h1>
           <p className="text-[18px]">
-            RCM Healthcare joined the healthcare landscape in 2009. Since then,
-            we have <br></br> been providing high-quality business process
-            outsourcing services<br></br> to physicians and practices of all
-            specialties.
+            RCM Healthcare is providing high-quality business process
+            outsourcing services to physicians and practices of all
+            specialities.
           </p>
         </div>
       </section>
@@ -208,7 +207,7 @@ const Home = () => {
         />
         <div className="ml-[50px]">
           <h1 className="text-[50px] font-bold leading-none mb-[20px] pt-[80px] md:pt-0 text-[#21c78f]">
-            We Choose RCM <br></br>Healthcare
+            Why Choose RCM <br></br>Healthcare
           </h1>
           <p className="md:text-[18px] text-[15px] mb-[20px]">
             RCM Healthcare has been providing medical billing, credentialing,

@@ -211,10 +211,10 @@ const Home = () => {
             We Choose RCM <br></br>Healthcare
           </h1>
           <p className="md:text-[18px] text-[15px] mb-[20px]">
-            For 14 years, RCM Healthcare has provided medical billing,
-            credentialing, pre-authorization, and front-office management
-            services to physicians. We’re experts in our field, and our team is
-            passionate about helping doctors
+            RCM Healthcare has been providing medical billing, credentialing,
+            pre-authorization, and front-office management services to
+            physicians. We’re experts in our field, and our team is passionate
+            about helping doctors
           </p>
           <p className="md:text-[18px] text-[15px]">
             Our goal is to provide you with the support you need so you can
@@ -250,7 +250,7 @@ const Home = () => {
             </div>
             <div className="bg-[#21c78f] m-3 text-center p-[20px]">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
-                Evaluation
+                Planning
               </h1>
               <p>
                 We understand that every practice has unique needs and
@@ -261,7 +261,7 @@ const Home = () => {
             </div>
             <div className="bg-[#21c78f] m-3 text-center p-[20px]">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
-                Evaluation
+                Execution
               </h1>
               <p>
                 We understand that every practice has unique needs and
@@ -272,7 +272,7 @@ const Home = () => {
             </div>
             <div className="bg-[#21c78f] m-3 text-center p-[20px]">
               <h1 className="text-white font-bold text-[22px] mb-[15px]">
-                Evaluation
+                Support
               </h1>
               <p>
                 We understand that every practice has unique needs and

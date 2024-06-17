@@ -115,13 +115,13 @@ const Home = () => {
               </h1>
               <p className="md:text-[18px] text-[15px] mb-[20px]">
                 {active === 1 &&
-                  "Secure your practice’s financial position with Centro Healthcare’s comprehensive medical billing services"}
+                  "Secure your practice’s financial position with RCM Healthcare’s comprehensive medical billing services"}
                 {active === 2 &&
-                  "When you outsource your credentialing/recredentialing needs to Centro Healthcare’s team of experts, you’ll be able to:"}
+                  "When you outsource your credentialing/recredentialing needs to RCM Healthcare’s team of experts, you’ll be able to:"}
                 {active === 3 &&
                   "We know that specific medical procedures require approval from your patients’ insurance companies before they can receive them. And to that end,"}
                 {active === 4 &&
-                  "Centro Healthcare’s front-office services entail handling and managing all of the following:"}
+                  "RCM Healthcare’s front-office services entail handling and managing all of the following:"}
               </p>
               <ul className="text-black list-disc marker:text-[#21c78f] ">
                 {active === 1 &&
@@ -211,7 +211,7 @@ const Home = () => {
             We Choose RCM <br></br>Healthcare
           </h1>
           <p className="md:text-[18px] text-[15px] mb-[20px]">
-            For 14 years, Centro Healthcare has provided medical billing,
+            For 14 years, RCM Healthcare has provided medical billing,
             credentialing, pre-authorization, and front-office management
             services to physicians. We’re experts in our field, and our team is
             passionate about helping doctors

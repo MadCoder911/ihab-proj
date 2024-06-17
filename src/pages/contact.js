@@ -79,7 +79,7 @@ const Contact = () => {
               <option value="3">Customer Experience</option>
               <option value="4">Health Care</option>
             </select>
-            <p>How Did You Hear About Centro</p>
+            <p>How Did You Hear About RCM</p>
             <select
               value={form.howInfo}
               onChange={(e) => setForm({ ...form, howInfo: e.target.value })}

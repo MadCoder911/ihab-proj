@@ -18,7 +18,26 @@ const Contact = () => {
     message: "",
   });
   const handleFormSubmit = async () => {
-    if (!form.first_name) {
+    if (!form.first_name || form.first_name.length < 2) {
+      toast.error("Please insert your first name");
+    } else if (!form.last_name || form.last_name.length < 2) {
+      toast.error("Please insert your last name");
+    } else if (!form.title || form.title.length < 2) {
+      toast.error("Please insert a correct title");
+    } else if (!form.company || form.company.length < 2) {
+      toast.error("Please insert a correct company name");
+    } else if (!form.interest) {
+      toast.error("Please select your interest");
+    } else if (!form.method) {
+      toast.error("Please select how did you hear about RCM");
+    } else if (!form.country || form.country.length < 2) {
+      toast.error("Please insert a correct country");
+    } else if (!form.email.includes("@") || !form.email.includes(".com")) {
+      toast.error("Please insert a correct email");
+    } else if (form.phone.length !== 11) {
+      toast.error("Please insert a correct phone number");
+    } else if (form.message.length < 20) {
+      toast.error("Message needs to be atleast 20 characters long");
     } else {
       try {
         const { data } = await axios({
@@ -32,8 +51,19 @@ const Contact = () => {
           data: JSON.stringify(form),
         });
         console.log(data);
-        toast.success("You Have Been Registered");
-
+        toast.success("Your message has been recieved !");
+        setForm({
+          first_name: "",
+          last_name: "",
+          title: "",
+          company: "",
+          interest: "",
+          method: "",
+          country: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
         return;
       } catch (error) {
         toast.error(error.response.data.message);
@@ -61,13 +91,13 @@ const Contact = () => {
           <div className="flex flex-col gap-[35px]  w-[100%] md:w-[50%]">
             <input
               type="text"
-              value={form.firstName}
+              value={form.first_name}
               onChange={(e) => setForm({ ...form, first_name: e.target.value })}
               placeholder="First Name *"
               className="outline-none border-b border-b-neutral-400  w-[100%]"
             />
             <input
-              value={form.lastName}
+              value={form.last_name}
               onChange={(e) => setForm({ ...form, last_name: e.target.value })}
               type="text"
               placeholder="Last Name *"

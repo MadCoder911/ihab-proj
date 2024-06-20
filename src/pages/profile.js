@@ -77,7 +77,9 @@ const Profile = () => {
                     <span className="font-bold text-white text-[20px]">
                       Current RC score:
                     </span>{" "}
-                    <span className="text-white text-[18px]">40%</span>
+                    <span className="text-white text-[18px]">
+                      {userInfo.rc_score}%
+                    </span>
                   </p>
                   <p>
                     <span className="font-bold text-white text-[20px]">

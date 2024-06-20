@@ -23,13 +23,16 @@ const Login = () => {
     }
   }, []);
   const register = async () => {
+    const number = Math.random();
+    const intiger = number * 100;
+    const percentage = intiger.toString().substring(0, 4);
     try {
       const { data } = await axios({
         method: "post",
         url: "https://backend-production-1f9e.up.railway.app/register",
         withCredentials: true,
         headers: { "Content-Type": "application/json", credentials: "include" },
-        data: JSON.stringify(loginInfo),
+        data: JSON.stringify({ ...loginInfo, rc_score: percentage }),
       });
       console.log(data, "data");
       toast.success("You Have Been Registered");

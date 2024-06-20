@@ -87,7 +87,7 @@ const Profile = () => {
                   </p>
                 </div>
                 <div className="my-[70px] w-[100%] flex  lg:flex-row flex-col gap-[30px] lg:gap-0 justify-between items-center">
-                  <div className="box bg-white rounded-md shadow-md p-[30px] hover:scale-[105%] transition-all ease-in-out cursor-pointer">
+                  <div className="box bg-white relative rounded-md shadow-md p-[30px] hover:scale-[105%] w-fit xl:max-w-[30%] xl:h-[600px] transition-all ease-in-out cursor-pointer">
                     <h1 className="font-bold text-[30px] text-center mb-[30px]">
                       Silver
                     </h1>
@@ -98,18 +98,19 @@ const Profile = () => {
                       </span>
                     </div>
                     <div className="mt-[30px]">
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 2 Users
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Claim submission
                       </p>
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 10 Medical Consultations
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Elgibility and benefits
+                        checks
                       </p>
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 24/7 Support
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Payment posting
                       </p>
                     </div>
                     <button
-                      className="bg-[#21c78f] text-white w-[100%] mt-[40px] hover:scale-[105%] transition-all ease-in-out cursor-pointer rounded-md p-2"
+                      className="bg-[#21c78f] text-white  mt-[40px]  hover:scale-[105%] w-[80%] left-[50%] translate-x-[-50%] absolute bottom-[10px] transition-all ease-in-out cursor-pointer rounded-md p-2"
                       onClick={() => {
                         setShowPay(true);
                         setSubscribtion("silver");
@@ -118,29 +119,38 @@ const Profile = () => {
                       Subscribe Now
                     </button>
                   </div>
-                  <div className="box bg-white rounded-md shadow-md p-[30px] hover:scale-[105%] transition-all ease-in-out cursor-pointer">
+                  <div className="box bg-white relative rounded-md shadow-md p-[30px] hover:scale-[105%] w-fit xl:max-w-[30%] xl:h-[600px] transition-all ease-in-out cursor-pointer">
                     <h1 className="font-bold text-[30px] text-center mb-[30px]">
                       Gold
                     </h1>
                     <div className=" flex items-center justify-center w-[100%] relative ">
-                      <p>Price $20</p>
+                      <p>Price $50</p>
                       <span className="absolute top-[0px] left-[130px] text-[13px] text-gray-500 ">
                         /month
                       </span>
                     </div>
                     <div className="mt-[30px]">
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 2 Users
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Claims submission
                       </p>
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 10 Medical Consultations
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Eglibity and benefits
+                        checks
                       </p>
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 24/7 Support
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Denial and rejection
+                        managment
+                      </p>
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Claims follow ups and
+                        appeals managment
+                      </p>
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Payment posting
                       </p>
                     </div>
                     <button
-                      className="bg-[#21c78f] text-white w-[100%] mt-[40px] hover:scale-[105%] transition-all ease-in-out cursor-pointer rounded-md p-2"
+                      className="bg-[#21c78f] w-[80%] left-[50%] translate-x-[-50%] absolute bottom-[10px] text-white mt-[40px] hover:scale-[105%] transition-all ease-in-out cursor-pointer rounded-md p-2"
                       onClick={() => {
                         setShowPay(true);
                         setSubscribtion("gold");
@@ -149,29 +159,48 @@ const Profile = () => {
                       Subscribe Now
                     </button>
                   </div>
-                  <div className="box bg-white rounded-md shadow-md p-[30px] hover:scale-[105%] transition-all ease-in-out cursor-pointer">
+                  <div className="box bg-white relative rounded-md shadow-md p-[30px] hover:scale-[105%] w-fit xl:max-w-[30%] xl:h-[600px] transition-all ease-in-out cursor-pointer">
                     <h1 className="font-bold text-[30px] text-center mb-[30px]">
                       Platinum
                     </h1>
                     <div className=" flex items-center justify-center w-[100%] relative ">
-                      <p>Price $20</p>
+                      <p>Price $80</p>
                       <span className="absolute top-[0px] left-[130px] text-[13px] text-gray-500 ">
                         /month
                       </span>
                     </div>
                     <div className="mt-[30px]">
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 2 Users
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Claims submission
                       </p>
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 10 Medical Consultations
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> 10 eglibity and benefits
+                        checks
                       </p>
-                      <p className="flex text-[14px] items-center mb-[10px]">
-                        <TiTick /> 24/7 Support
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Denial and rejection
+                        managment
+                      </p>
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Claims follow ups and
+                        appeals management
+                      </p>
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Authorizations and
+                        referrals managment
+                      </p>
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Credentialling
+                      </p>
+                      <p className="flex text-[14px] items-start mb-[10px]">
+                        <TiTick className="w-[20px]" /> Patient’s AR management
+                      </p>
+                      <p className="flex text-[14px] itemsstartr mb-[10px]">
+                        <TiTick className="w-[20px]" /> Payment posting
                       </p>
                     </div>
                     <button
-                      className="bg-[#21c78f] text-white w-[100%] mt-[40px] hover:scale-[105%] transition-all ease-in-out cursor-pointer rounded-md p-2"
+                      className="bg-[#21c78f] w-[80%] left-[50%] translate-x-[-50%] absolute bottom-[10px] text-white w-[100%] mt-[40px] hover:scale-[105%] transition-all ease-in-out cursor-pointer rounded-md p-2"
                       onClick={() => {
                         setShowPay(true);
                         setSubscribtion("platinum");

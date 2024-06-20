@@ -3,19 +3,43 @@ import Footer from "../components/Footer";
 import { PiArrowFatLineRightFill } from "react-icons/pi";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import axios from "axios";
 const Contact = () => {
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     title: "",
     company: "",
     interest: "",
-    howInfo: "",
+    method: "",
     country: "",
     email: "",
     phone: "",
     message: "",
   });
+  const handleFormSubmit = async () => {
+    if (!form.first_name) {
+    } else {
+      try {
+        const { data } = await axios({
+          method: "post",
+          url: "https://backend-production-1f9e.up.railway.app/contact",
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+            credentials: "include",
+          },
+          data: JSON.stringify(form),
+        });
+        console.log(data);
+        toast.success("You Have Been Registered");
+
+        return;
+      } catch (error) {
+        toast.error(error.response.data.message);
+      }
+    }
+  };
   return (
     <section className="flex flex-col w-[100vw]">
       <div className="contactbg  flex flex-col items-center">
@@ -38,13 +62,13 @@ const Contact = () => {
             <input
               type="text"
               value={form.firstName}
-              onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+              onChange={(e) => setForm({ ...form, first_name: e.target.value })}
               placeholder="First Name *"
               className="outline-none border-b border-b-neutral-400  w-[100%]"
             />
             <input
               value={form.lastName}
-              onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+              onChange={(e) => setForm({ ...form, last_name: e.target.value })}
               type="text"
               placeholder="Last Name *"
               className="outline-none border-b border-b-neutral-400  w-[100%]"
@@ -74,15 +98,15 @@ const Contact = () => {
               <option value="" selected className="text-gray-400">
                 Select
               </option>
-              <option value="1">Datasphere</option>
-              <option value="2">Digital Experience</option>
-              <option value="3">Customer Experience</option>
-              <option value="4">Health Care</option>
+              <option value="datasphere">Datasphere</option>
+              <option value="experience">Digital Experience</option>
+              <option value="customer experience">Customer Experience</option>
+              <option value="health care">Health Care</option>
             </select>
             <p>How Did You Hear About RCM</p>
             <select
               value={form.howInfo}
-              onChange={(e) => setForm({ ...form, howInfo: e.target.value })}
+              onChange={(e) => setForm({ ...form, method: e.target.value })}
               name=""
               id=""
               className="outline-none border-b border-b-neutral-400  w-[100%] placeholder:text-gray-400 "
@@ -135,37 +159,38 @@ const Contact = () => {
                 className="font-[900] text-[20px]"
                 //
                 onClick={() => {
-                  if (
-                    !form.firstName ||
-                    !form.lastName ||
-                    !form.title ||
-                    !form.company ||
-                    !form.interest ||
-                    !form.interest ||
-                    !form.howInfo ||
-                    !form.country ||
-                    !form.email ||
-                    !form.email.includes("@") ||
-                    !form.email.includes(".com") ||
-                    form.phone.length < 11 ||
-                    form.message.length < 5
-                  ) {
-                    toast.error("Please fill all the input fields");
-                  } else {
-                    toast.success("We will contact you shortly");
-                    setForm({
-                      firstName: "",
-                      lastName: "",
-                      title: "",
-                      company: "",
-                      interest: "",
-                      howInfo: "",
-                      country: "",
-                      email: "",
-                      phone: "",
-                      message: "",
-                    });
-                  }
+                  handleFormSubmit();
+                  // if (
+                  //   !form.firstName ||
+                  //   !form.lastName ||
+                  //   !form.title ||
+                  //   !form.company ||
+                  //   !form.interest ||
+                  //   !form.interest ||
+                  //   !form.howInfo ||
+                  //   !form.country ||
+                  //   !form.email ||
+                  //   !form.email.includes("@") ||
+                  //   !form.email.includes(".com") ||
+                  //   form.phone.length < 11 ||
+                  //   form.message.length < 5
+                  // ) {
+                  //   toast.error("Please fill all the input fields");
+                  // } else {
+                  //   toast.success("We will contact you shortly");
+                  //   setForm({
+                  //     firstName: "",
+                  //     lastName: "",
+                  //     title: "",
+                  //     company: "",
+                  //     interest: "",
+                  //     howInfo: "",
+                  //     country: "",
+                  //     email: "",
+                  //     phone: "",
+                  //     message: "",
+                  //   });
+                  // }
                 }}
               >
                 Send Message
